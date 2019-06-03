@@ -10,6 +10,7 @@ public class Box {
     private Manifest contents;
     private Customer customer;
     private Depot depot; 
+    private int capacity = 20;
 
     public Box(Customer customer, Depot depot) {
         this.customer = customer;
@@ -22,9 +23,7 @@ public class Box {
             contents.addProduct(product, 1);
         }
     }
-    
-    
-    
+        
     public void addProduct(Product product, int quantity) {
         if (canFit(product,quantity)); {
             contents.addProduct(product, quantity);
@@ -42,6 +41,9 @@ public class Box {
         if (this.isFragile()) {
             label.append("FRAGILE\n");
         }
+        if (this.getWeight() > 15) {
+            label.append("HEAVY\n");
+        }
         return label.toString();
     }
     
@@ -54,15 +56,15 @@ public class Box {
     }
     
     public boolean canFit(Product p) {
-        return p.getWeight() < 40;
+        return p.getWeight() < capacity;
     }
     
     public boolean canFit(Product p, int quantity) {
-        return (p.getWeight() * quantity) < 40;
+        return (p.getWeight() * quantity) < capacity;
     }
     
     public double remainingCapacity() {
-        return 40 - this.getWeight();
+        return capacity - this.getWeight();
     }
     
     public boolean isFragile() {
@@ -70,6 +72,6 @@ public class Box {
     }
     
     public boolean isHazardous() {
-        return false;
+        return contents.hasHazardousItems();
     }
 }
