@@ -38,14 +38,16 @@ public class Manifest {
     }
     
     public void removeProduct(Product p) {
-        if (quantities.containsKey(p) && quantities.get(p) > 0) {
-            quantities.put(p,quantities.get(p)-1);
-        }
-        if (quantities.get(p) == 0) {
-            quantities.remove(p);
-        }
-        if (quantities.containsKey(p)) {
-            byWeight.remove(p);
+        for (int i = 0; i < quantities.get(p)+i; i++) {
+            if (quantities.containsKey(p) && quantities.get(p) > 0) {
+                quantities.put(p,quantities.get(p)-1);
+            }
+            if (quantities.get(p) == null) {
+                quantities.remove(p);
+            }
+            if (quantities.containsKey(p)) {
+                byWeight.remove(p);
+            }
         }
     }
     
@@ -88,6 +90,15 @@ public class Manifest {
     public boolean hasFragileItems() {
         for (Product p : quantities.keySet()) {
             if (p.isFragile()) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public boolean hasHazardousItems() {
+        for (Product p : quantities.keySet()) {
+            if (p.isHazardous()) {
                 return true;
             }
         }
