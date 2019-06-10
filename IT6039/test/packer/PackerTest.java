@@ -5,6 +5,7 @@
  */
 package packer;
 
+import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.BeforeClass;
@@ -56,7 +57,10 @@ public class PackerTest {
             m.addProduct(item);
         }
         
-        Packer.packProducts(c, d, m);
+        List<Box> packedItems = Packer.packProducts(c, d, m);
+        for (Box items : packedItems) {
+            System.out.println(items);
+        }
     }
     
 }
