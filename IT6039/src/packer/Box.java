@@ -44,6 +44,9 @@ public class Box {
         if (this.getWeight() > 15) {
             label.append("HEAVY\n");
         }
+        if (this.isHazardous()) {
+            label.append("HAZARD\n");
+        }
         return label.toString();
     }
     
