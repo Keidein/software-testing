@@ -9,6 +9,13 @@ import java.util.List;
  */
 public class Packer {
 
+    /**
+     * 
+     * @param c Customer the boxes are going to.
+     * @param d Depot the boxes are coming from.
+     * @param m Manifest of the products.
+     * @return the packed boxes contents and label information.
+     */
     public static List<Box> packProducts(Customer c, Depot d, Manifest m) {
         List<Box> packedBoxes = new ArrayList<>();
         Box b = null;

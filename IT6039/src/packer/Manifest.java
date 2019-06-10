@@ -21,10 +21,19 @@ public class Manifest {
         byWeight = new TreeSet<>(new ProductWeightComparator());
     }
     
+    /**
+     * Adds 1 product to the manifest.
+     * @param p the product.
+     */
     public void addProduct(Product p) {
         addProduct(p,1);
     }
     
+    /**
+     * Adds multiple products to the manifest.
+     * @param p the product.
+     * @param quantity the amount of the product that you want to add.
+     */
     public void addProduct(Product p, int quantity) {
         if (quantities.containsKey(p)) {
             quantities.put(p,quantities.get(p)*quantity);
@@ -37,6 +46,10 @@ public class Manifest {
         }
     }
     
+    /**
+     * Remove the product from the manifest.
+     * @param p the product.
+     */
     public void removeProduct(Product p) {
         for (int i = 0; i < quantities.get(p)+1; i++) {
             if (quantities.containsKey(p) && quantities.get(p) > 0) {
@@ -51,6 +64,10 @@ public class Manifest {
         }
     }
     
+    /**
+     * Gets the total weight of the products in the manifest.
+     * @return 
+     */
     public double getTotalWeight() {
         double weight = 0;
         for (Product p : quantities.keySet()) {
@@ -59,6 +76,11 @@ public class Manifest {
         return weight;
     }
     
+    /**
+     * Returns the products that are under a certain weight.
+     * @param weight specified weight as a double.
+     * @return 
+     */
     public Product getHeaviestUnder(double weight) {
         for (Product p : byWeight) {
             if (p.getWeight() <= weight) {
@@ -68,14 +90,27 @@ public class Manifest {
         return null;
     }
     
+    /**
+     * Checks if the manifest is empty.
+     * @return 
+     */
     public boolean isEmpty() {
         return byWeight.isEmpty();
     }
     
+    /**
+     * Checks if the manifest has a certain product.
+     * @param p the product in which to check for.
+     * @return 
+     */
     public boolean containsProduct(Product p) {
         return quantities.containsKey(p) && quantities.get(p) > 0;
     }
     
+    /**
+     * Gets the name and the quantity of the products in the manifest.
+     * @return 
+     */
     public String toString() {
         StringBuilder result = new StringBuilder();
         for (Product p : quantities.keySet()) {
@@ -87,6 +122,10 @@ public class Manifest {
         return result.substring(0, result.length()-1);
     }
     
+    /**
+     * Checks if there is fragile items.
+     * @return 
+     */
     public boolean hasFragileItems() {
         for (Product p : quantities.keySet()) {
             if (p.isFragile()) {
@@ -96,6 +135,10 @@ public class Manifest {
         return false;
     }
     
+    /**
+     * Checks if there is hazardous items.
+     * @return 
+     */
     public boolean hasHazardousItems() {
         for (Product p : quantities.keySet()) {
             if (p.isHazardous()) {
