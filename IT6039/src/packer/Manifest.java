@@ -77,7 +77,7 @@ public class Manifest {
     }
     
     /**
-     * Returns the products that are under a certain weight.
+     * Returns the heaviest product that is under a certain weight.
      * @param weight specified weight as a double.
      * @return 
      */
