@@ -91,8 +91,7 @@ public class Manifest {
     }
     
     /**
-     * Checks if the manifest is empty.
-     * @return 
+     * @return if the box is empty or not.
      */
     public boolean isEmpty() {
         return byWeight.isEmpty();
@@ -108,8 +107,7 @@ public class Manifest {
     }
     
     /**
-     * Gets the name and the quantity of the products in the manifest.
-     * @return 
+     * @return the name and the quantity of the products in the manifest.
      */
     public String toString() {
         StringBuilder result = new StringBuilder();
@@ -123,8 +121,7 @@ public class Manifest {
     }
     
     /**
-     * Checks if there is fragile items.
-     * @return 
+     * @return if there is fragile items in the manifest.
      */
     public boolean hasFragileItems() {
         for (Product p : quantities.keySet()) {
@@ -136,8 +133,7 @@ public class Manifest {
     }
     
     /**
-     * Checks if there is hazardous items.
-     * @return 
+     * @return if there is hazardous items in the manifest.
      */
     public boolean hasHazardousItems() {
         for (Product p : quantities.keySet()) {

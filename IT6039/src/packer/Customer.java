@@ -13,7 +13,7 @@ public class Customer {
     private List<Address> addresses;
 
     /**
-     * Constructor.
+     * Class constructor.
      * @param name the name of the person at the address.
      * @param address the location of the person as an Address.
      */

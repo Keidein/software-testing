@@ -26,14 +26,14 @@ public class Product {
     }
 
     /**
-     * @return the weight
+     * @return the weight.
      */
     public int getWeight() {
         return weight;
     }
 
     /**
-     * @return the name
+     * @return the name.
      */
     public String getName() {
         return name;

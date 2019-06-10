@@ -10,7 +10,7 @@ import java.util.List;
 public class Packer {
 
     /**
-     * 
+     * This function puts all of the products into boxes.
      * @param c Customer the boxes are going to.
      * @param d Depot the boxes are coming from.
      * @param m Manifest of the products.

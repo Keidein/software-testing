@@ -78,6 +78,19 @@ public class ManifestTest {
     }
     
     @Test
+    public void testIsEmpty() {
+        Manifest m = new Manifest();
+        m.addProduct(p[0]);
+        assertEquals(false, m.isEmpty());
+    }
+    
+    @Test
+    public void testContainsProduct() {
+        Manifest m = new Manifest();
+        assertEquals(false, m.containsProduct(p[1]));
+    }
+    
+    @Test
     public void testToString() {
         System.out.println("toString");
         Manifest m = new Manifest();

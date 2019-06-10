@@ -38,7 +38,7 @@ public class Address {
                 postcode;
     }
     /**
-     * @return the coordinates
+     * @return the coordinates.
      */
     public Coordinates getCoordinates() {
         return coordinates;

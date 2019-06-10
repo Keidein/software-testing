@@ -33,12 +33,12 @@ public class Box {
     }
         
     /**
-     * @param product the product to add to the box.
+     * @param p the product to add to the box.
      * @param quantity the quantity of the product that'll be added.
      */
-    public void addProduct(Product product, int quantity) {
-        if (canFit(product,quantity)); {
-            contents.addProduct(product, quantity);
+    public void addProduct(Product p, int quantity) {
+        if (canFit(p,quantity)); {
+            contents.addProduct(p, quantity);
         }
     }
     
@@ -81,7 +81,7 @@ public class Box {
     }
     
     /**
-     * @param p the product
+     * @param p the product.
      * @return returns true if the product can fit in the box.
      */
     public boolean canFit(Product p) {

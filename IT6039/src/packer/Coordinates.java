@@ -34,7 +34,7 @@ public class Coordinates {
     }
     
     /**
-     * Calculates the distances to a different coordinate.
+     * Calculates the distances to a different set of coordinates.
      * @param other a second set of coordinates.
      * @return the distance between the 2 coordinates.
      */

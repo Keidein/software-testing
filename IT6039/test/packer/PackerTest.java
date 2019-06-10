@@ -61,6 +61,7 @@ public class PackerTest {
         int i = 0;
         for (Box items : packedItems) {
             assertTrue(items.toString().contains(p[i].toString()));
+            i++;
         }
     }
     

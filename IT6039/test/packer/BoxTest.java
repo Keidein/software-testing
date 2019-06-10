@@ -17,7 +17,6 @@ public class BoxTest {
     
     public static final double DELTA = 0.001;
     
-    //Coordinates coord = new Coordinates(59, 300);
     Coordinates coord[] =
     {
         // Customers Coordinates.

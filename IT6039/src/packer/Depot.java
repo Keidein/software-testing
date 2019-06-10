@@ -9,7 +9,7 @@ public class Depot {
     private Address address;
 
     /**
-     * Constructor of the depot
+     * Constructor of the depot.
      * @param name name of the depot
      * @param address address of the depot
      */
