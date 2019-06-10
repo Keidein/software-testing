@@ -78,11 +78,11 @@ public class CoordinatesTest {
      * Test of companyDistanceTo method, of class Coordinates.
      */
     @Test
-    public void testCompanyDistanceTo() {
+    public void testCompareDistanceTo() {
         System.out.println("companyDistanceTo");
-        assertEquals(61.0, testCoordinates1.companyDistanceTo(testCoordinates2), ACCEPTABLE_DELTA);
-        assertEquals(2619.0340, testCoordinates1.companyDistanceTo(testCoordinates3), ACCEPTABLE_DELTA);
-        assertEquals(2559.4464, testCoordinates2.companyDistanceTo(testCoordinates3), ACCEPTABLE_DELTA);
+        assertEquals(61.0, testCoordinates1.compareDistanceTo(testCoordinates2), ACCEPTABLE_DELTA);
+        assertEquals(2619.0340, testCoordinates1.compareDistanceTo(testCoordinates3), ACCEPTABLE_DELTA);
+        assertEquals(2559.4464, testCoordinates2.compareDistanceTo(testCoordinates3), ACCEPTABLE_DELTA);
     }
     
 }

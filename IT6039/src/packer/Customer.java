@@ -45,7 +45,7 @@ public class Customer {
         double bestDistance = Double.MAX_VALUE;
         Address bestAddress = null;
         for (Address a : addresses) {
-            double distance = a.getCoordinates().companyDistanceTo(d.getCoordinates());
+            double distance = a.getCoordinates().compareDistanceTo(d.getCoordinates());
             if (distance < bestDistance) {
                 bestAddress = a;
                 bestDistance = distance;

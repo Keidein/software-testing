@@ -62,7 +62,7 @@ public class Coordinates {
      * @param other the second set of coordinates.
      * @return the distance between both coordinates +1.
      */
-    public double companyDistanceTo(Coordinates other) {
+    public double compareDistanceTo(Coordinates other) {
         double xDiff1 = other.getX() - this.getX();
         double yDiff1 = other.getY() - this.getY();
         double dist1 = Math.pow((xDiff1 * xDiff1 + yDiff1 * yDiff1),0.5);
