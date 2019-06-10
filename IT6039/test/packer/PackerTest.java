@@ -58,8 +58,9 @@ public class PackerTest {
         }
         
         List<Box> packedItems = Packer.packProducts(c, d, m);
+        int i = 0;
         for (Box items : packedItems) {
-            System.out.println(items);
+            assertTrue(items.toString().contains(p[i].toString()));
         }
     }
     
