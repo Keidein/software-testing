@@ -23,8 +23,8 @@ public class ManifestTest {
         new Product("Keyboard", 5, false, false),
         new Product("Mouse", 3, false, false),
         new Product("Desk", 15, false, false),
-        new Product("Set of Knifes", 7, true, true),
-        new Product("Asortment of food", 10, false, true)
+        new Product("Set of Knives", 7, true, true),
+        new Product("Assortment of food", 10, false, true)
     };
     
     @BeforeClass
@@ -47,8 +47,6 @@ public class ManifestTest {
         System.out.println("removeProduct");
         Manifest m = new Manifest();
         
-        m.addProduct(p[1]);
-        m.removeProduct(p[1]);
         assertEquals(false, m.containsProduct(p[1]));
     }
     

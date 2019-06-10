@@ -38,9 +38,9 @@ public class PackerTest {
     
     static Product p[] = {
         new Product("Nail Polish", 1, false, true),
-        new Product("Set of Knifes", 8, true, false),
+        new Product("Set of Knives", 8, true, false),
         new Product("Playstation Portable", 5, false, true),
-        new Product("Backscratcher", 1, true, false),
+        new Product("Back scratcher", 1, true, false),
         new Product("Headphones", 5, false, true)
     };
     
