@@ -61,14 +61,13 @@ public class Product {
     }
     
     /**
-     * @param o is another product.
+     * @param p is another product.
      * @return if the other product equals this product.
      */
-    public boolean equals(Object o) {
-        if (!(o instanceof Product)) {
+    public boolean equals(Product p) {
+        if (!(p instanceof Product)) {
             return false;
         }
-        Product p = (Product)o;
         return p.getName().equals(this.getName());
     }
     
