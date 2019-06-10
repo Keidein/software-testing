@@ -89,6 +89,13 @@ public class BoxTest {
     }
     
     @Test
+    public void testRemainingCapacity() {
+        System.out.println("remainingCapacity");
+        box.addProduct(p[1]);
+        assertEquals(5, box.remainingCapacity(), DELTA);
+    }
+    
+    @Test
     public void testIsFragile() {
         System.out.println("isFragile");
         box.addProduct(p[2]);
